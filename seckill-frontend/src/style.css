@@ -1,0 +1,147 @@
+:root {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei',
+    sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #1e293b;
+  background-color: #f8fafc;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --bg: #f8fafc;
+  --panel: rgba(255, 255, 255, 0.8);
+  --border: rgba(0, 0, 0, 0.1);
+  --primary: #6366f1;
+  --accent: #10b981;
+  --muted: #64748b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.1), transparent 28%),
+    radial-gradient(circle at 80% 0%, rgba(16, 185, 129, 0.08), transparent 28%),
+    radial-gradient(circle at 10% 80%, rgba(0, 0, 0, 0.04), transparent 35%), var(--bg);
+  animation: floatBg 18s ease-in-out infinite alternate;
+  color: #1e293b;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.page {
+  padding: 16px;
+  color: #1e293b;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.hoverable {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hoverable:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes floatBg {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.glass {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+}
+
+.el-card {
+  background: var(--panel) !important;
+  border-color: var(--border) !important;
+  color: #1e293b !important;
+}
+
+.el-table {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1e293b;
+}
+
+.el-table td,
+.el-table th {
+  background: transparent;
+  color: #1e293b;
+}
+
+.el-card__body,
+.el-descriptions__label,
+.el-descriptions__content,
+.el-form-item__label {
+  color: #1e293b !important;
+}
+
+.el-input__wrapper,
+.el-select .el-input__wrapper {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.el-pagination button,
+.el-pagination span {
+  color: #1e293b;
+}
+
+.el-breadcrumb__item,
+.el-breadcrumb__inner {
+  color: #475569 !important;
+}
+
+.el-table,
+.el-table__cell {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+}
+
+.el-table th,
+.el-table tr,
+.el-table td {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+}
+
+.el-table--enable-row-hover .el-table__body tr:hover > td {
+  background-color: #f1f5f9 !important;
+}
+
+.el-input__inner,
+.el-select .el-input__inner {
+  color: #1e293b !important;
+}
+
+.el-input__inner::placeholder,
+.el-select .el-input__inner::placeholder {
+  color: #94a3b8 !important;
+}
